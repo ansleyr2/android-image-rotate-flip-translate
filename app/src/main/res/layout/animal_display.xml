@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/birdImage"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bird"
+            />
+
+        <TextView
+            android:id="@+id/birdDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bird_description"
+            android:gravity="center"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/catImage"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cat"
+
+            />
+
+        <TextView
+            android:id="@+id/catDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_description"
+            android:gravity="center"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/dogImage"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dog"
+
+            />
+
+        <TextView
+            android:id="@+id/dogDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dog_description"
+            android:gravity="center"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/rotateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rotate"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/flipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flip"
+            android:layout_toRightOf="@id/rotateButton"
+            />
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="100dp">
+            <ImageView
+                android:id="@+id/translateLeftButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_35dp"
+                android:layout_below="@id/translateTopButton"
+
+                />
+
+            <ImageView
+                android:id="@+id/translateTopButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_upward_black_35dp"
+                android:layout_toRightOf="@id/translateLeftButton"
+                />
+
+            <ImageView
+                android:id="@+id/translateRightButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_forward_black_35dp"
+                android:layout_toRightOf="@id/translateResetButton"
+                android:layout_below="@id/translateTopButton"
+                />
+
+            <!--android:layout_below="@id/translateTopButton"/>-->
+
+            <ImageView
+                android:id="@+id/translateResetButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_center_focus_strong_black_35dp"
+                android:layout_below="@id/translateTopButton"
+                android:layout_toRightOf="@id/translateLeftButton"
+                />
+
+            <ImageView
+                android:id="@+id/translateDownButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_downward_black_35dp"
+                android:layout_below="@id/translateResetButton"
+                android:layout_alignStart="@id/translateResetButton"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
